@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.navbar{
+    width: 100%;
+    height: 70px;
+    background: violet;
+    padding: 0 10%;
+}
+.collection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.item{
+    list-style: none;
+    color: #fff;
+}
+.item:first-child{
+    color: red;
+}
+.item:last-child{
+    color: blue;
+}
+.item:nth-child(3){
+    color: gold;
+}
+
+.item:nth-child(5) > button{
+    background: red;
+}
+
+
+.parent{
+    border: 1px solid blue;
+}
+/*  only children */
+.parent > p{
+    color: red;
+}
+/* + - first neighbor */
+/* ~ - all neighbor  */
+.parent ~ p{
+    color: blueviolet;
+}
+.toggle{
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+    border-radius: 30px;
+    background:#ddd;
+    padding: 2px;
+    cursor: pointer;
+    user-select: none;
+}
+#input__toggle{
+    display: none;
+}
+.cirle{
+    width: 35px;
+    height: 35px;
+    background: #fff;
+    border-radius: 50px;
+    transition: .30s;
+    
+}
+#input__toggle:checked + .toggle{
+    background: dodgerblue;
+}
+#input__toggle:checked + .toggle > .cirle{
+    transform: translateX(40px);
+}
+
+
+
+.btn{
+   padding: 10px 24px;
+   border-radius: 10px;
+   border: 1px solid dodgerblue;
+   background: dodgerblue;
+   color: #fff;
+}
+.btn:hover{
+    background: blue;
+    cursor: pointer;
+}
+.btn:active{
+    transform: scale(.90);
+    opacity: .9;
+
+}
+
+.inp{
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+}
+.inp:focus{
+    outline: 2px solid rgb(170, 206, 242);
+    background: wheat;
+}
+/* disabled button di ishlatmidi */
+.btn:disabled{
+    opacity: .7;
+    cursor: no-drop;
+}
+.btn:disabled:hover{
+    background: dodgerblue;
+}
+.btn:disabled:active{
+    transform: scale(1);
+
+
+}
